@@ -148,7 +148,6 @@ jobs:
   linux-wheels-arm64:
     name: Build Linux wheels for ARM64
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || startsWith(github.event.ref, 'refs/tags'))
 
     steps:
     - uses: actions/checkout@v5
