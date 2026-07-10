@@ -159,6 +159,9 @@ jobs:
     - linux-wheels-arm64
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
     - uses: actions/download-artifact@v5
       with:
