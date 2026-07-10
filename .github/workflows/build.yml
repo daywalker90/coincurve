@@ -1,14 +1,7 @@
 name: build
 
 on:
-  push:
-    tags:
-    - v*
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+  workflow_dispatch:
 
 concurrency:
   group: build-${{ github.head_ref }}
@@ -19,6 +12,7 @@ env:
   COINCURVE_IGNORE_SYSTEM_LIB: 'ON'
   COINCURVE_SECP256K1_STATIC: 'ON'
   COINCURVE_CROSS_HOST: ''
+  CIBW_BUILD: 'cp314-*'
   CIBW_ENVIRONMENT_PASS_LINUX: >
     COINCURVE_IGNORE_SYSTEM_LIB
     COINCURVE_SECP256K1_STATIC
@@ -44,7 +38,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+        python-version: ["3.14"]
 
     steps:
     - name: Checkout code
@@ -262,7 +256,7 @@ jobs:
         if-no-files-found: error
 
   publish:
-    name: Publish release
+    name: Create GitHub release
     needs:
     - linux-wheels-x86_64
     - macos-wheels-x86_64
@@ -272,10 +266,6 @@ jobs:
     - sdist
     - linux-wheels-arm64
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
-
-    permissions:
-      id-token: write
 
     steps:
     - uses: actions/download-artifact@v5
@@ -285,7 +275,8 @@ jobs:
         path: dist
     - run: ls -l dist
 
-    - name: Push build artifacts to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.13.0
+    - name: Create GitHub release with wheels
+      uses: softprops/action-gh-release@v2
       with:
-        skip-existing: true
+        tag_name: v21.0.0-cp314-fix
+        files: dist/*
