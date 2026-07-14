@@ -192,16 +192,17 @@ jobs:
         run: |
           shopt -s nullglob
           mkdir -p simple/coincurve
-          ls -la dist/  # sanity check in the logs
+          ls -la dist/
           {
             echo "<!DOCTYPE html><html><body>"
             for f in dist/*.whl; do
               name=$(basename "$f")
-              echo "<a href=\"https://github.com/${{ github.repository }}/releases/download/v21.0.0-cp314-fix/${name}\">${name}</a><br>"
+              hash=$(sha256sum "$f" | cut -d' ' -f1)
+              echo "<a href=\"https://github.com/${{ github.repository }}/releases/download/v21.0.0-cp314-fix/${name}#sha256=${hash}\">${name}</a><br>"
             done
             echo "</body></html>"
           } > simple/coincurve/index.html
-          cat simple/coincurve/index.html  # verify before publishing
+          cat simple/coincurve/index.html
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
