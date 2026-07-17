@@ -8,7 +8,7 @@ requires = [
 ]
 
 [project]
-name = "coincurve"
+name = "coincurve-cp314-fix"
 authors = [
     { name = "Ofek Lev", email = "oss@ofek.dev" },
 ]

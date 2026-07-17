@@ -274,6 +274,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
 
+    environment:
+      name: pypi
+      url: https://pypi.org/p/coincurve-cp314-fix
+
     permissions:
       id-token: write
 
