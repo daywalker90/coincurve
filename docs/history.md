@@ -6,6 +6,12 @@ Important changes are emphasized.
 
 ## Unreleased
 
+## 22.0.0
+
+- **Breaking:** Drop support for Python 3.9
+- raise `MACOSX_DEPLOYMENT_TARGET` to 10.15 (was 10.13)
+- Add support for Python 3.14
+
 ## 21.0.0
 
 - **Breaking:** Drop support for Python 3.8
