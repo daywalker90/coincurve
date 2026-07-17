@@ -97,7 +97,7 @@ jobs:
       env:
         CIBW_ARCHS_MACOS: x86_64
         CIBW_SKIP: "cp314t-*"
-        MACOSX_DEPLOYMENT_TARGET: 10.13
+        MACOSX_DEPLOYMENT_TARGET: 10.15
 
   macos-wheels-arm64:
     name: Build macOS wheels for ARM64
