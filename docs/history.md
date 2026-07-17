@@ -6,6 +6,10 @@ Important changes are emphasized.
 
 ## Unreleased
 
+## 22.0.1
+
+ - fix python 3.14 wheel builds
+
 ## 22.0.0
 
 - **Breaking:** Drop support for Python 3.9
