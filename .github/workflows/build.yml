@@ -196,7 +196,7 @@ jobs:
     name: Build Windows wheels for ARM64
     needs:
     - test
-    runs-on: windows-latest
+    runs-on: windows-11-arm
 
     steps:
     - uses: actions/checkout@v5
@@ -204,7 +204,6 @@ jobs:
     - name: Build wheels
       uses: pypa/cibuildwheel@v4.1.0
       env:
-        COINCURVE_CROSS_HOST: 'arm64'
         CIBW_ARCHS_WINDOWS: 'ARM64'
         CIBW_BEFORE_ALL: choco install -y --no-progress --no-color cmake>=3.28
 
