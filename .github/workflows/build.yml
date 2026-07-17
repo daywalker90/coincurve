@@ -84,6 +84,7 @@ jobs:
       uses: astral-sh/setup-uv@v5
 
     - name: Benchmark
+      if: "!(startsWith(matrix.os, 'macos-') && matrix.python-version == '3.14')"
       run: uv run --python-preference system scripts/bench.py
 
   coverage:
