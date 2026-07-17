@@ -238,16 +238,10 @@ jobs:
     name: Build Linux wheels for ARM64
     needs:
     - test
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/master' || startsWith(github.event.ref, 'refs/tags'))
+    runs-on: ubuntu-24.04-arm
 
     steps:
     - uses: actions/checkout@v5
-
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v3
-      with:
-        platforms: arm64
 
     - name: Build wheels
       uses: pypa/cibuildwheel@v4.1.0
