@@ -2,12 +2,14 @@
 
 | | |
 | --- | --- |
-| CI/CD | [![CI - Test](https://github.com/ofek/coincurve/actions/workflows/build.yml/badge.svg)](https://github.com/ofek/coincurve/actions/workflows/build.yml) [![CI - Coverage](https://img.shields.io/codecov/c/github/ofek/coincurve/master.svg?logo=codecov&logoColor=red)](https://codecov.io/github/ofek/coincurve) |
-| Docs | [![CI - Docs](https://github.com/ofek/coincurve/actions/workflows/docs.yml/badge.svg)](https://github.com/ofek/coincurve/actions/workflows/docs.yml) |
-| Package | [![PyPI - Version](https://img.shields.io/pypi/v/coincurve.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/coincurve/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/coincurve.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold)](https://pypi.org/project/coincurve/) [![Required Python Version](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fofek%2Fcoincurve%2FHEAD%2Fpyproject.toml)](https://pypi.org/project/coincurve/) |
+| CI/CD | [![CI - Test](https://github.com/daywalker90/coincurve/actions/workflows/build.yml/badge.svg)](https://github.com/daywalker90/coincurve/actions/workflows/build.yml) [![CI - Coverage](https://img.shields.io/codecov/c/github/daywalker90/coincurve/master.svg?logo=codecov&logoColor=red)](https://codecov.io/github/daywalker90/coincurve) |
+| Docs | [![CI - Docs](https://github.com/daywalker90/coincurve/actions/workflows/docs.yml/badge.svg)](https://github.com/daywalker90/coincurve/actions/workflows/docs.yml) |
+| Package | [![PyPI - Version](https://img.shields.io/pypi/v/coincurve-cp314-fix.svg?logo=pypi&label=PyPI&logoColor=gold)](https://pypi.org/project/coincurve-cp314-fix/) [![PyPI - Downloads](https://img.shields.io/pypi/dm/coincurve-cp314-fix.svg?color=blue&label=Downloads&logo=pypi&logoColor=gold)](https://pypi.org/project/coincurve-cp314-fix/) [![Required Python Version](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fdaywalker90%2Fcoincurve%2FHEAD%2Fpyproject.toml)](https://pypi.org/project/coincurve-cp314-fix/) |
 | Meta | [![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/ofek/dep-sync) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![types - Mypy](https://img.shields.io/badge/types-Mypy-blue.svg)](https://github.com/python/mypy) [![License - MIT OR Apache-2.0](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-9400d3.svg)](https://spdx.org/licenses/) [![GitHub Sponsors](https://img.shields.io/github/sponsors/ofek?logo=GitHub%20Sponsors&style=social)](https://github.com/sponsors/ofek) |
 
 -----
+
+## This is a fork of ofek/coincurve to publish working python 3.14 wheels under [coincurve-cp314-fix](https://pypi.org/p/coincurve-cp314-fix)
 
 This library provides well-tested Python bindings for [libsecp256k1](https://github.com/bitcoin-core/secp256k1), the heavily optimized C library
 used by [Bitcoin Core](https://github.com/bitcoin/bitcoin) for operations on the elliptic curve [secp256k1](https://en.bitcoin.it/wiki/Secp256k1).

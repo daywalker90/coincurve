@@ -1,11 +1,11 @@
 # /// script
 # dependencies = [
-#   "coincurve",
+#   "coincurve-cp314-fix",
 #   "fastecdsa==3.0.1; sys_platform != 'win32'",
 #   "rich",
 # ]
 # [tool.uv.sources]
-# coincurve = { path = ".." }
+# coincurve-cp314-fix = { path = ".." }
 # ///
 import os
 import sys

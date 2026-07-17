@@ -56,6 +56,9 @@ Source = "https://github.com/ofek/coincurve"
 [tool.hatch.version]
 path = "src/coincurve/__init__.py"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/coincurve"]
+
 [tool.hatch.build.targets.wheel.hooks.custom]
 
 [tool.hatch.build.targets.wheel.hooks.scikit-build]
@@ -67,6 +70,9 @@ wheel.py-api = ""
 wheel.packages = []
 
 # --- scikit-build-core ---
+[tool.scikit-build]
+wheel.install-dir = "coincurve"
+
 [tool.scikit-build.cmake.define]
 CMAKE_BUILD_TYPE = "Release"
 # Coincurve build options - This may be better extracted from the ENV by the CMake directly?

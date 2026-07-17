@@ -44,4 +44,4 @@ add_subdirectory(cm_library_c_binding)
 add_subdirectory(cm_python_module)
 
 # Configure installation of the shared library ${CFFI_OUTPUT_LIBRARY} in the package
-install(TARGETS ${CFFI_OUTPUT_LIBRARY} LIBRARY DESTINATION ${SKBUILD_PLATLIB_DIR}/${SKBUILD_PROJECT_NAME})
+install(TARGETS ${CFFI_OUTPUT_LIBRARY} LIBRARY DESTINATION ${SKBUILD_PLATLIB_DIR}/coincurve)
