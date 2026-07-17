@@ -35,6 +35,7 @@ env:
   CIBW_TEST_SKIP: "*-macosx_arm64"
   CIBW_SKIP: >
       pp*
+      cp314t-*
 
 jobs:
   test:
@@ -96,7 +97,6 @@ jobs:
       uses: pypa/cibuildwheel@v4.1.0
       env:
         CIBW_ARCHS_MACOS: x86_64
-        CIBW_SKIP: "cp314t-*"
         MACOSX_DEPLOYMENT_TARGET: 10.15
 
   macos-wheels-arm64:
